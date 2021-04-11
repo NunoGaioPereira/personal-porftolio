@@ -13,12 +13,40 @@
 		* {
 			font-family: 'Muli';
 		}
+
+		.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+}
+
+.grid a img {
+    transition: all .2s ease-in;
+    filter: grayscale(0);
+}
+
+.grid a:hover img {
+    filter: grayscale(100%);
+}
+
+/*@media screen and (min-width: 768px) {*/
+@media screen and (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 	</style>
 </head>
 <body>
 	<div class="app" x-data="{ navScrolled: false }">
 
-		<nav class="bg-white fixed w-full" x-data="{ mobileMenuOpen: false }" :class="{'bg-red-200 border-b border-gray-100' : !navScrolled }" @scroll.window="navScrolled = (window.pageYOffset > 50) ? false : true" >
+		<nav style="box-shadow: 0px 0px 10px 0px #ddd;" class="bg-white fixed w-full" x-data="{ mobileMenuOpen: false }" :class="{'bg-red-200 border-b border-gray-100' : !navScrolled }" @scroll.window="navScrolled = (window.pageYOffset > 50) ? false : true" >
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="relative flex items-center justify-between h-20">
 					<div class="flex items-center">
@@ -27,7 +55,7 @@
 								<img class="h-12 w-auto" src="./img/logo1.png" alt="Nuno's Personal Logo">
 							</a>
 						</div>
-						<div class="inline-block ml-10">
+						<div class="ml-10 hidden sm:inline-block">
 							<ul class="space-x-8">
 								<li class="inline-block font-semibold text-gray-900 transition duration-300 "><a href="">Home</a></li>
 								<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600"><a href="">About</a></li>
@@ -179,7 +207,7 @@
 		</nav>-->
 
 
-		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
+		<section class="max-w-7xl mx-auto pxtt-4 sm:pxtt-6 px-8 min-h-screen flex items-center justify-center">
 			<div class="text-center">
 				<h1 class="text-4xl font-bold">Design. Develop. Innovate.</h1>
 				<h2 class="mt-2 text-gray-500 max-w-lg">I am Nuno, a web designer and developer based in Portugal. My passion is to create fully fledged websites and web apps :)</h2>
@@ -189,7 +217,7 @@
 			</div>
 		</section>
 
-		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<section class="max-w-7xl mx-auto px-8">
 			<div class="flex items-center justify-between w-full">
 				<div class="w-1/2">
 					<p class="font-bold text-xl">who am I <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
@@ -205,9 +233,81 @@
 			</div>
 		</section>
 
-		<footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<section class="max-w-7xl mx-auto px-8 py-36">
+			<p class="font-bold text-lg mb-2">my work <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
+			<h2 class="font-bold text-4xl">Projects</h2>
+			<div class="py-8">
+				<div class="grid grid-cols-2">
+				 	<div class="col-span-1 py-6">
+			       		<div class="relative">
+				            <a href="http://tradydaddy.com/" target="_blank">
+				                <img src="https://picsum.photos/id/211/400/320" alt="" class="w-full relative" style="z-index: -1">
+				                <div class="absolute bottom-0 left-0 text-xl p-4 w-full text-white font-bold">
+				                	<p style="text-shadow: 1px 1px #999;">Musician Portfolio Website</p>
+				                </div>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="col-span-1 py-6">
+			       		<div class="relative">
+				            <a href="http://tradydaddy.com/" target="_blank">
+				                <img src="https://picsum.photos/id/201/400/320" alt="" class="w-full relative" style="z-index: -1">
+				                <div class="absolute bottom-0 left-0 text-xl p-4 w-full text-white font-bold">
+				                	<p style="text-shadow: 1px 1px #999;">Musician Portfolio Website</p>
+				                </div>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="col-span-1 py-6">
+			       		<div class="relative">
+				            <a href="http://tradydaddy.com/" target="_blank">
+				                <img src="https://picsum.photos/id/43/400/320" alt="" class="w-full relative" style="z-index: -1">
+				                <div class="absolute bottom-0 left-0 text-xl p-4 w-full text-white font-bold">
+				                	<p style="text-shadow: 1px 1px #999;">Musician Portfolio Website</p>
+				                </div>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="col-span-1 py-6">
+			       		<div class="relative">
+				            <a href="http://tradydaddy.com/" target="_blank">
+				                <img src="https://picsum.photos/id/8/400/320" alt="" class="w-full relative" style="z-index: -1">
+				                <div class="absolute bottom-0 left-0 text-xl p-4 w-full text-white font-bold">
+				                	<p style="text-shadow: 1px 1px #999;">Musician Portfolio Website</p>
+				                </div>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="col-span-1 py-6">
+			       		<div class="relative">
+				            <a href="http://tradydaddy.com/" target="_blank">
+				                <img src="https://picsum.photos/id/100/400/320" alt="" class="w-full relative" style="z-index: -1">
+				                <div class="absolute bottom-0 left-0 text-xl p-4 w-full text-white font-bold">
+				                	<p style="text-shadow: 1px 1px #999;">Musician Portfolio Website</p>
+				                </div>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="col-span-1 py-6">
+			       		<div class="relative">
+				            <a href="http://tradydaddy.com/" target="_blank">
+				                <img src="https://picsum.photos/id/78/400/320" alt="" class="w-full relative" style="z-index: -1">
+				                <div class="absolute bottom-0 left-0 text-xl p-4 w-full text-white font-bold">
+				                	<p style="text-shadow: 1px 1px #999;">Musician Portfolio Website</p>
+				                </div>
+				            </a>
+				        </div>
+				    </div>
+			    </div>
+			</div>
+			<div class="mt-8">
+				<a href="" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white">see more</a>
+			</div>
+		</section>
+
+		<footer class="max-w-7xl mx-auto px-8">
 			<div class="py-6 pb-12 flex flex-col sm:flex-row justify-between">
-				<div>
+				<div class="text-center pb-5 sm:pb-0 sm:text-left">
 					<h3 class="text-gray-900 text-3xl">Have a project in mind?</h3>
 					<h4 class="mt-1 text-gray-300 text-3xl">Let's talk!</h4>
 					<div class="mt-10">
@@ -291,17 +391,6 @@
 	</div>
 	<!-- <script src="./main.js"></script> -->
 
-<!-- 	<div>
-		<p>HEALTH ❤️</p>
-		<p>EMOTIONS 🔥</p>
-		<p>RELATIONSHIPS ✨</p>
-		<p>LIFESTYLE 🍀</p>
-		<p>GROWTH 🌊</p>
-		<p>MISSION 💗</p>
-		<p>PROSPERITY 🔮</p>
-		<p>CONTRIBUTION 🎀</p>
-		<p>SPIRITUALITY 🌸</p>
-	</div> -->
 	<script> </script>
 
 </body>
