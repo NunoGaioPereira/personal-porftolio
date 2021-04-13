@@ -46,7 +46,7 @@
 <body>
 	<div class="app" x-data="{ navScrolled: false, mobileMenu: false }">
 
-		<nav style="box-shadow: 0px 0px 10px 0px #ddd;" class="bg-white fixed w-full" :clas="{'bg-red-200 border-b border-gray-100' : !navScrolled }" @scroll.window="navScrolled = (window.pageYOffset > 50) ? false : true" >
+		<nav style="box-shadow: 0px 0px 10px 0px #ddd;" class="bg-white z-40 fixed w-full" :clas="{'bg-red-200 border-b border-gray-100' : !navScrolled }" @scroll.window="navScrolled = (window.pageYOffset > 50) ? false : true" >
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="relative flex items-center justify-between h-20">
 					<div class="flex items-center">
