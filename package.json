@@ -1,0 +1,24 @@
+{
+  "name": "mar-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NunoGaioPereira/personal-porftolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NunoGaioPereira/personal-porftolio/issues"
+  },
+  "homepage": "https://github.com/NunoGaioPereira/personal-porftolio#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
