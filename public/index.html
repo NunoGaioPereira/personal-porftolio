@@ -4,6 +4,25 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
 	<!-- <link rel="stylesheet" href="./style.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -12,6 +31,10 @@
 	<style type="text/css">
 		* {
 			font-family: 'Muli';
+		}
+
+		html {
+			scroll-behavior: smooth;
 		}
 
 		.grid {
@@ -159,7 +182,7 @@
 		    	 x-transition:enter-end="transform translate-x-full"
 		         x-transition:leave-end="transform translate-x-full" >
 				<div class="flex justify-between items-center pt-8 px-8">
-					<img src="../logo_no_bg.png" class="w-10">
+					<img src="./img/logo_no_bg.png" class="w-10">
 
 					<svg @click="mobileMenu = false" class="h-7 w-7 cursor-pointer" fill="currentColor" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
 						<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
@@ -308,19 +331,19 @@
 				<h1 class="text-4xl font-bold">Design. Develop. Innovate.</h1>
 				<h2 class="mt-4 text-gray-500 max-w-lg">I am Nuno, a web designer and developer based in Portugal. My passion is to create fully fledged websites and web apps :)</h2>
 				<div class="mt-10">
-					<a href="" class="inline-block bg-gray-900 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white ">read more</a>
+					<a href="#about" class="inline-block bg-gray-900 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white ">read more</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="max-w-7xl mx-auto px-8">
+		<section class="max-w-7xl mx-auto px-8" id="about">
 			<div class="flex flex-col sm:flex-row items-center justify-between w-full">
 				<div class="w-full sm:w-1/2">
 					<p class="font-bold text-xl">who am I <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
 					<h2 class="font-bold text-4xl">Nuno Gaio Pereira<span class="bg-blue-400 w-2 h-2 inline-block ml-1"></span></h2>
 					<p class="text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat liqua.</p>
 					<div class="mt-8">
-						<a href="" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white">what I offer</a>
+						<a href="#services" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white">what I offer</a>
 					</div>
 				</div>
 				<div class="w-full sm:w-1/2 text-right">
@@ -329,7 +352,7 @@
 			</div>
 		</section>
 
-		<section class="max-w-7xl mx-auto px-8 py-36">
+		<section class="max-w-7xl mx-auto px-8 py-36" id="services">
 			<p class="font-bold text-xl">my expertises <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
 			<h2 class="font-bold text-4xl">Services</h2>
 
@@ -355,11 +378,11 @@
 			</div>
 			<!-- <div class="w-full bg-gray-100 p-8"></div> -->
 			<div class="mt-8 text-center">
-				<a href="" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white">portfolio</a>
+				<a href="#portfolio" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white">portfolio</a>
 			</div>
 		</section>
 
-		<section class="max-w-7xl mx-auto px-8 py-36">
+		<section class="max-w-7xl mx-auto px-8 py-36" id="portfolio">
 			<p class="font-bold text-lg mb-2">my work <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
 			<h2 class="font-bold text-4xl">Projects</h2>
 			<div class="py-8">
@@ -452,7 +475,7 @@
 			<hr>
 			<div class="w-full py-4 items-center flex flex-col sm:flex-row justify-between"">
 				<a href="/">
-					<img src="../logo_no_bg.png" class="h-7">
+					<img src="./img/logo_no_bg.png" class="h-7">
 				</a>
 				<ul class="text-gray-700 list-none pt-8 sm:p-0 flex items-center justify-center">
 	                <!-- <li class="inline-block py-2 px-3 text-gray-900 uppercase font-medium tracking-wide">Links</li> -->
