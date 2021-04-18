@@ -75,11 +75,12 @@
 	<div class="app" x-data="{ navScrolled: false, mobileMenu: false }">
 
 		<nav style="box-shadow: 0px 0px 10px 0px #ddd;" class="bg-white z-40 fixed w-full" :clas="{'bg-red-200 border-b border-gray-100' : !navScrolled }" @scroll.window="navScrolled = (window.pageYOffset > 50) ? false : true" >
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
 				<div class="relative flex items-center justify-between h-20">
 					<div class="flex items-center">
 						<div class="flex-shrink-0">
 							<a href="">
+								<!-- <img class="h-8 w-auto" src="./img/logo_no_bg.png" alt="Nuno's Personal Logo"> -->
 								<img class="h-12 w-auto" src="./img/logo1.png" alt="Nuno's Personal Logo">
 							</a>
 						</div>
@@ -163,7 +164,7 @@
 						</div>
 						<div class="flex items-center sm:hidden">
 							<!-- Mobile menu button-->
-							<button @click="mobileMenu = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+							<button @click="mobileMenu = true" type="button" class="inline-flex items-center justify-center rounded-md text-gray-800 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
 								<span class="sr-only">Open main menu</span>
 								<svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -340,7 +341,7 @@
 
 		<section class="max-w-7xl mx-auto pxtt-4 sm:pxtt-6 px-8 min-h-screen flex items-center">
 			<div class="">
-				<p class="font-semibold text-xl mb-2">nuno gaio pereira <!--<span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span>--></p>
+				<!-- <p class="font-semibold text-xl mb-2">nuno gaio pereira <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p> -->
 				<h1 class="text-4xl font-semibold">Design. Develop. Innovate.</h1>
 				<h2 class="mt-4 text-gray-500 max-w-lg">I am Nuno, a web designer and developer based in Portugal. My passion is to create fully fledged websites and web apps :)</h2>
 				<div class="mt-10">
