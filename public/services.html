@@ -26,10 +26,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
-	<!-- <link rel="stylesheet" href="./style.css"> -->
+	<link rel="stylesheet" href="./css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-	<title>Document</title>
+	<title>Nuno Gaio Pereira - Services</title>
 
 	<style type="text/css">
 		@import url('../fonts/fonts.css');
@@ -42,11 +42,74 @@
 			scroll-behavior: smooth;
 		}
 
+		.service-link:hover img {
+			transform: translateX(10px);
+		}
+
+		.btn-expand {
+			transition: width 0.3s ease-in-out;
+		}
+		.btn-expand:hover {
+			width: 120px;
+		}
+
 		.grid {
 		    display: grid;
 		    grid-template-columns: 1fr;
 		    grid-gap: 1.5rem;
 		}
+
+		.btn-service {
+		  position: absolute;
+		//  float: none;
+		 // top: 50%;
+		 // left: 50%;
+		  text-align: center;
+		}
+
+.cta {
+  width: 50px;
+  height: 50px;
+  //border-radius: 50px;
+  color: #fff;
+  transition: width 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.cta:hover {
+  width: 180px;
+  transition: width 0.7s;
+}
+
+.cta .number, .cta .btn-arrow {
+  opacity: 1;
+  transition: opacity 0.5s
+}
+
+.cta:hover .number, .cta:hover .btn-arrow {
+  opacity: 0;
+  transition: opacity 0.5s
+}
+
+.cta .button-text {
+  opacity: 0;
+  transition: opacity .5s;
+  position: absolute;
+  width: 100%;
+  left: 0;
+ }
+
+.cta:hover .button-text {
+  opacity: 1;
+  transition: opacity 0.5s
+}
+
+.number {
+  font-weight: 600;
+  font-size: 25px;
+}
 
 		/*.grid a img {
 		    transition: all .2s ease-in;
@@ -339,21 +402,109 @@
 		</section> -->
 
 		<section class="max-w-7xl mx-auto px-8 py-36" id="about">
-			<h1 class="text-4xl font-semibold">Services</h1>
-			<h2 class="my-4 mb-12 text-gray-500 max-w-lg">Wanna find out how I can help you with your next project? Let's get you sorted.</h2>
-			<div class="flex flex-col sm:flex-row items-center justify-between w-full">
+			<div>
+				<p class="font-semibold text-xl">my expertises <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
+				<h1 class="text-4xl font-semibold">Services</h1>
+				<h2 class="my-4 mb-12 text-gray-500 max-w-lg">Wanna find out how I can help you with your next project? Let's get you sorted.</h2>
+				<!-- <div class="mt-8">
+					<a href="#design" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-3 text-sm text-white">what I offer</a>
+				</div>
+				<div class="btn-expand bg-gray-200 w-10 h-10 transition duration-300 overflow-x-hidden overflow-y-hidden py-2 px-2 rounded-full">
+					01 Design
+				</div>
+				<div class="btn-expand rounded-full transition duration-300 w-10 overflow-x-hidden py-3 bg-blue-400">
+					<a href="#design" class="text-sm text-white text-gray-500 overflow-x-hidden">01 Design</a>
+				</div>
+				<div>
+					<a href="#design" class="block bg-blue-400 hover:bg-gray-800 rounded-full transition duration-300 w-10 overflow-x-hidden py-3 text-sm text-white btn-expand text-gray-500">01 Design</a>
+				</div>
+
+				<div class="btn-expand">
+					
+				</div> -->
+
+
+				<div class="flex w-full justify-between">
+					<!-- <div class="block mr-12 bg-gray-300 w-full w-12 h-12"> -->
+					    <div class="btn-service">  
+							<a href="#services" class="cta bg-blue-400">
+						      <!-- <p class="number">01</p> -->
+						      <img class="btn-arrow w-4" src="./img/arrow_right_white.png">
+						      <span class="button-text">Go</span>
+						    </a>
+						</div>
+					<!-- </div> -->
+					<!-- <div class="block mr-12 bg-gray-300 w-full w-12 h-12"> -->
+					    <!-- <div class="btn-service ml-16">  
+							<a href="" class="cta bg-blue-400">
+						      <p class="number">02</p>
+						      <span class="button-text">Development</span>
+						    </a>
+						</div>
+						<div class="btn-service ml-32">  
+							<a href="" class="cta bg-blue-400">
+						      <p class="number">03</p>
+						      <span class="button-text">Branding</span>
+						    </a>
+						</div> -->
+					<!-- </div> -->
+				</div>
+			</div>
+
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full py-36" id="services">
 				<div class="w-full sm:w-1/2">
 					<div class="relative">
-						<p style="z-index: -1; color: #f2f2f2; font-size: 150px; line-height: 1;" class="font-semibold absolute -top-10">01</p>
+						<p style="z-index: -1; color: #f2f2f2; font-size: 180px; line-height: 1;" class="font-semibold absolute -top-14">01</p>
 						<h2 class="font-bold text-4xl">Design</h2>
 						<p class="mt-4">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat liqua. I am a Designer and Full-Stack Developer.</p>
 						<div class="mt-8">
-							<a href="#services" class="inline-block transition duration-300 font-semibold">see design projects -></a>
+							<a href="/portfolio" class="inline-block transition duration-300 font-semibold service-link">
+								<span>see design projects</span>
+								<img class="transition ml-2 inline-block w-4" src="./img/arrow_right.png">
+							</a>
 						</div>
 					</div>
 				</div>
 				<div class="w-full sm:w-1/2 text-right">
-					<img class="w-full max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/tmp.png">
+					<img class="w-full max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/hemingway.png">
+				</div>
+			</div>
+
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-20">
+				<div class="w-full sm:w-1/2">
+					<img class="w-full max-w-md pt-10 mx-auto sm:mx-0 sm:p-0 sm:pr-6" src="./img/agp1.png">
+				</div>
+				<div class="w-full sm:w-1/2">
+					<div class="relative">
+						<p style="z-index: -1; color: #f2f2f2; font-size: 180px; line-height: 1;" class="font-semibold absolute -top-14">02</p>
+						<h2 class="font-bold text-4xl">Web Development</h2>
+						<p class="mt-4">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat liqua. I am a Designer and Full-Stack Developer.</p>
+						<div class="mt-8">
+							<a href="/portfolio" class="inline-block transition duration-300 font-semibold service-link">
+								<span>see web development projects</span>
+								<img class="transition ml-2 inline-block w-4" src="./img/arrow_right.png">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full py-20">
+				<div class="w-full sm:w-1/2">
+					<div class="relative">
+						<p style="z-index: -1; color: #f2f2f2; font-size: 180px; line-height: 1;" class="font-semibold absolute -top-14">03</p>
+						<h2 class="font-bold text-4xl">Branding & Identity</h2>
+						<p class="mt-4">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat liqua. I am a Designer and Full-Stack Developer.</p>
+						<div class="mt-8">
+							<a href="/portfolio" class="inline-block transition duration-300 font-semibold service-link">
+								<span>see branding projects</span>
+								<img class="transition ml-2 inline-block w-4" src="./img/arrow_right.png">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="w-full sm:w-1/2 text-right">
+					<img class="w-full max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/logo1.png">
 				</div>
 			</div>
 		</section>
