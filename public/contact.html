@@ -404,21 +404,21 @@
 		            </ul>
 				</div>
 				<div class="w-full sm:w-1/2 mt-12 sm:mt-0">
-					<form>
+					<form class="contact-form">
 						<div>
 							<label class="block font-semibold text-lg">Name</label>
-							<input type="text" name="name" placeholder="Your Name" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3">
+							<input type="text" name="name" id="name" placeholder="Your Name" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3">
 						</div>
 						<div class="mt-4">
 							<label class="block font-semibold text-lg">Email</label>
-							<input type="email" name="email" placeholder="example@email.com" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3">
+							<input type="email" name="email" id="email" placeholder="example@email.com" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3">
 						</div>
 						<div class="mt-4">
 							<label class="block font-semibold text-lg">Message</label>
-							<textarea name="message" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3" rows="6" placeholder="Your Message"></textarea>
+							<textarea id="message" name="message" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3" rows="6" placeholder="Your Message"></textarea>
 						</div>
 						<div class="mt-8">
-							<a href="" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-12 py-3 text-white">send</a>
+							<button type="submit" class="cursor-pointer inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-12 py-3 text-white" value="send">send</button>
 						</div>
 					</form>
 				</div>
@@ -511,7 +511,40 @@
 	</div>
 	<!-- <script src="./main.js"></script> -->
 
-	<script> </script>
+	<script>
+		const contactForm = document.querySelector('.contact-form');
+		let name = document.getElementById('name');
+		let email = document.getElementById('email');
+		let message = document.getElementById('message');
+
+		contactForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			let formData = {
+				name: name.value,
+				email: email.value,
+				message: message.value,
+			}
+
+			let xhr = new XMLHttpRequest();
+			xhr.open('POST', '/contact');
+			xhr.setRequestHeader('content-type', 'application/json');
+			xhr.onload = function() {
+				console.log(xhr.responseText);
+				if(xhr.responseText == 'success') {
+					alert('Email sent');
+					name.value = '';
+					email.value = '';
+					message.value = '';
+				}
+				else {
+					alert('Something went wrong');
+				}
+			}
+
+			xhr.send(JSON.stringify(formData));
+		});
+	</script>
 
 </body>
 </html>
