@@ -132,6 +132,54 @@
 		        grid-template-columns: repeat(3, 1fr);
 		    }
 		}
+
+		.technologies {
+		    display: grid;
+		    margin-top: 30px;
+		    margin-bottom: 80px;
+		    padding-left: 0;
+		    grid-auto-columns: 1fr;
+		    grid-column-gap: 16px;
+		    grid-row-gap: 16px;
+		    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+		    grid-template-columns: 1fr 1fr 1fr 1fr;
+		    -ms-grid-rows: auto;
+		    grid-template-rows: auto;
+		}
+
+		@media screen and (max-width: 767px) {
+			.technologies {
+			    -ms-grid-columns: 1fr 1fr;
+			    grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		.technologies__item {
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -ms-flexbox;
+		    display: flex;
+		    padding-left: 0;
+		    background-image: none;
+		    color: #1e2228;
+	        margin-bottom: 16px;
+		}
+
+		.skill {
+		    color: #000;
+		    transition: transform 0.25s ease-in-out;
+		}
+
+		.skill:hover {
+		    -webkit-transform: translate(0,-1px);
+		    -ms-transform: translate(0,-1px);
+		    transform: translate(0,-3px);
+		}
+
+		.technologies__icon {
+		    width: 24px;
+		    margin-right: 10px;
+		}
 	</style>
 </head>
 <body>
@@ -401,8 +449,8 @@
 			</div>
 		</section> -->
 
-		<section class="max-w-7xl mx-auto px-8 py-36" id="about">
-			<div>
+		<section class="max-w-7xl mx-auto px-8 pt-48 pb-16" id="about">
+			<div class="pb-36">
 				<p class="font-semibold text-xl">my expertises <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
 				<h1 class="text-4xl font-semibold">Services</h1>
 				<h2 class="my-4 mb-12 text-gray-500 max-w-lg">Wanna find out how I can help you with your next project? Let's get you sorted.</h2>
@@ -449,7 +497,7 @@
 						</div> -->
 					<!-- </div> -->
 				</div>
-			</div>
+			</div>			
 
 			<div class="flex flex-col sm:flex-row items-center justify-between w-full py-36" id="services">
 				<div class="w-full sm:w-1/2">
@@ -466,13 +514,13 @@
 					</div>
 				</div>
 				<div class="w-full sm:w-1/2 text-right">
-					<img class="w-full max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/hemingway.png">
+					<img class="w-full sm:max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/hemingway.png">
 				</div>
 			</div>
 
-			<div class="flex flex-col sm:flex-row items-center justify-between w-full py-36">
-				<div class="w-full sm:w-1/2">
-					<img class="w-full max-w-md pt-10 mx-auto sm:mx-0 sm:p-0 sm:pr-6" src="./img/agp1.png">
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-36 pb-12">
+				<div class="w-full sm:w-1/2 hidden sm:block">
+					<img class="w-full sm:max-w-md pt-10 mx-auto sm:mx-0 sm:p-0 sm:pr-6" src="./img/agp1.png">
 				</div>
 				<div class="w-full sm:w-1/2">
 					<div class="relative">
@@ -486,6 +534,87 @@
 							</a>
 						</div>
 					</div>
+				</div>
+				<div class="w-full sm:w-1/2 sm:hidden">
+					<img class="w-full sm:max-w-md pt-10 mx-auto sm:mx-0 sm:p-0 sm:pr-6" src="./img/agp1.png">
+				</div>
+			</div>
+
+			<div>
+				<div class="container">
+					<!-- <h3>CMS<br></h3>
+					Design
+					UI/UX
+					Wireframing
+					Development
+					Web App
+					Landing Page
+					Newsletter
+
+					wp
+					ss
+					shopify
+					webflow
+					wix
+
+					product design
+					ui/ux
+
+					python
+					c++
+
+					<h3>Development</h3>
+					html
+					css
+					javascript
+					node.js
+					mysql
+					mongoDB
+					php
+					laravel
+					express.js -->
+					<h3 class="text-2xl font-semibold text-gray-800">CMS</h3>
+					<ul role="list" class="technologies">
+						<li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/nodejs.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="technologies__name text-gray-800 font-medium">Wordpress</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<svg class="w-6 mr-3 text-gray-400" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="30px" height="24px" viewBox="0 0 90 72">
+								  <title>Squarespace Logo</title>
+								  <g data-name="Logo">
+								    <path d="M18.49 38.15L46.67 10A10.16 10.16 0 0 1 61 10l2.19 2.19 4.39-4.39-2.19-2.2a16.38 16.38 0 0 0-23.14 0L14.09 33.76z"></path>
+								    <path d="M56.11 19.27l-4.39-4.39-28.19 28.19A10.15 10.15 0 0 1 9.18 28.71L33.5 4.39 29.11 0 4.79 24.32a16.36 16.36 0 1 0 23.13 23.14zM84.17 24.32a16.39 16.39 0 0 0-23.14 0L32.84 52.51l4.39 4.39 28.19-28.19a10.15 10.15 0 0 1 17.32 7.18 10 10 0 0 1-3 7.18L55.45 67.39l4.4 4.39 24.32-24.32a16.38 16.38 0 0 0 0-23.14z"></path>
+								    <path d="M70.47 33.63L42.28 61.81a10.17 10.17 0 0 1-14.36 0l-2.19-2.2L21.34 64l2.19 2.2a16.39 16.39 0 0 0 23.14 0L74.86 38z"></path>
+								  </g>
+								</svg>
+								<div class="text-gray-800 font-medium">Squarespace</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/webflow.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Webflow</div>
+							</div>
+						</li>
+
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/uiux.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">UI/UX</div>
+							</div>
+						</li>
+					</ul>
+					<!-- <h3 class="text-xl font-semibold text-gray-800">Development</h3>
+					<ul role="list" class="technologies">
+						<li class="technologies__item"><a href="/development-services/node-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191229a361b00293efc6b4_nodejs.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Node.js</div></a></li>
+						<li class="technologies__item"><a href="/services/web-development" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a98a151460f3d11d1_reactnative.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">React.js</div></a></li>
+						<li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912292e13f63d4a9c6b0e_cloud.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Cloud</div></a></li>
+						<li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a3ef695203eeb53a5_uiux.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">UI/UX</div></a></li><li class="technologies__item"><a href="/development-services/react-native-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a98a151460f3d11d1_reactnative.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">React Native</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122831a68457d4208b64_automation.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Automation</div></a></li><li class="technologies__item"><a href="/development-services/python-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191229a21726425c1d7058_python.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Python</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912299bb728d4243d5f2d_discovery.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Product Discovery</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912283d1cb105c576c023_monitoring.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Monitoring</div></a></li><li class="technologies__item"><a href="/development-services/express-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912294e95eb2bb4f58294_expressjs.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Express.js</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191228a361b039caefc6b3_design.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Product Design</div></a></li><li class="technologies__item"><a href="/development-services/meteor-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191228a278ddd872a8938c_meteorjs.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Meteor.js</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122956aaf46db857520d_prototyping.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Rapid Prototyping</div></a></li>
+					</ul> -->
 				</div>
 			</div>
 
@@ -504,7 +633,7 @@
 					</div>
 				</div>
 				<div class="w-full sm:w-1/2 text-right">
-					<img class="w-full max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/logo1.png">
+					<img class="w-full sm:max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/logo1.png">
 				</div>
 			</div>
 		</section>
