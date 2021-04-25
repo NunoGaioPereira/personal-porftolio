@@ -168,11 +168,12 @@
 		.skill {
 		    color: #000;
 		    transition: transform 0.25s ease-in-out;
+		    user-select: none;
 		}
 
 		.skill:hover {
-		    -webkit-transform: translate(0,-1px);
-		    -ms-transform: translate(0,-1px);
+		    -webkit-transform: translate(0,-3px);
+		    -ms-transform: translate(0,-3px);
 		    transform: translate(0,-3px);
 		}
 
@@ -447,7 +448,15 @@
 					<a href="" class="inline-block bg-gray-900 hover:bg-gray-800 transition duration-300 px-8 py-2 pb-3 text-white ">read more</a>
 				</div>
 			</div>
-		</section> -->
+		</section> -->	
+
+		<!-- <div class="fixed top-0 right-0 h-screen px-6 flex flex-col justify-center" style="z-index: 1000;">
+			<ul>
+				<li class="font-semibold text-gray-300 my-1 font-mono">01</li>
+				<li class="font-semibold text-gray-600 my-1 font-mono">02</li>
+				<li class="font-semibold text-gray-300 my-1 font-mono">03</li>
+			</ul>
+		</div> -->
 
 		<section class="max-w-7xl mx-auto px-8 pt-48 pb-16" id="about">
 			<div class="pb-36">
@@ -475,7 +484,7 @@
 				<div class="flex w-full justify-between">
 					<!-- <div class="block mr-12 bg-gray-300 w-full w-12 h-12"> -->
 					    <div class="btn-service">  
-							<a href="#services" class="cta bg-blue-400">
+							<a href="#design" class="cta bg-blue-400">
 						      <!-- <p class="number">01</p> -->
 						      <img class="btn-arrow w-4" src="./img/arrow_right_white.png">
 						      <span class="button-text">Go</span>
@@ -499,7 +508,7 @@
 				</div>
 			</div>			
 
-			<div class="flex flex-col sm:flex-row items-center justify-between w-full py-36" id="services">
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-36 pb-12" id="design">
 				<div class="w-full sm:w-1/2">
 					<div class="relative">
 						<p style="z-index: -1; color: #f2f2f2; font-size: 180px; line-height: 1;" class="font-semibold absolute -top-14">01</p>
@@ -517,8 +526,53 @@
 					<img class="w-full sm:max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/hemingway.png">
 				</div>
 			</div>
+			<div>
+				<div class="container">
+					<h3 class="text-2xl font-semibold text-gray-800">Design</h3>
+					<ul role="list" class="technologies">
+						<li class="flex mb-4">
+							<div class="skill flex items-center">
+								<!-- <img src="./img/skills/laptop.svg" loading="lazy" alt="" class="w-6 mr-3"> -->
+								<img src="./img/skills/website.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Website Design</div>
+							</div>
+						</li>
+						<li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/phone.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">App Design</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/uiux.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">UI/UX</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<!-- <svg class="w-6 mr-3 p-1 text-gray-400" fill="currentColor" enable-background="new 0 0 467.765 467.765" height="512" viewBox="0 0 467.765 467.765" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m175.412 87.706h58.471v29.235h58.471v-87.706h-292.354v87.706h58.471v-29.235h58.471v292.353h-58.471v58.471h175.383v-58.471h-58.442z"/><path d="m233.882 175.412v87.706h58.471v-29.235h29.235v146.176h-29.235v58.471h116.941v-58.471h-29.235v-146.177h29.235v29.235h58.471v-87.706h-233.883z"/></svg> -->
+								<img src="./img/skills/pencil.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Graphic Design</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/branding.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Branding</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/product_design.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Product Design</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-			<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-36 pb-12">
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-36 pb-12" id="development">
 				<div class="w-full sm:w-1/2 hidden sm:block">
 					<img class="w-full sm:max-w-md pt-10 mx-auto sm:mx-0 sm:p-0 sm:pr-6" src="./img/agp1.png">
 				</div>
@@ -550,12 +604,30 @@
 					Web App
 					Landing Page
 					Newsletter
+					
+
+					website design
+					UI/UX
+					App design
+					Logo
+					Branding
+					graphic design
+					Design system
 
 					wp
 					ss
 					shopify
 					webflow
 					wix
+
+					html/css
+					tailwind
+					JS, jQUery
+					Laravel
+					SSL
+					Seo
+					Accessibility
+
 
 					product design
 					ui/ux
@@ -577,20 +649,13 @@
 					<ul role="list" class="technologies">
 						<li class="flex mb-4">
 							<div class="skill flex items-center">
-								<img src="./img/skills/nodejs.svg" loading="lazy" alt="" class="w-6 mr-3">
-								<div class="technologies__name text-gray-800 font-medium">Wordpress</div>
+								<img src="./img/skills/wordpress.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Wordpress</div>
 							</div>
 						</li>
 						<li class="flex pl-0 mb-4">
 							<div class="skill flex items-center">
-								<svg class="w-6 mr-3 text-gray-400" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="30px" height="24px" viewBox="0 0 90 72">
-								  <title>Squarespace Logo</title>
-								  <g data-name="Logo">
-								    <path d="M18.49 38.15L46.67 10A10.16 10.16 0 0 1 61 10l2.19 2.19 4.39-4.39-2.19-2.2a16.38 16.38 0 0 0-23.14 0L14.09 33.76z"></path>
-								    <path d="M56.11 19.27l-4.39-4.39-28.19 28.19A10.15 10.15 0 0 1 9.18 28.71L33.5 4.39 29.11 0 4.79 24.32a16.36 16.36 0 1 0 23.13 23.14zM84.17 24.32a16.39 16.39 0 0 0-23.14 0L32.84 52.51l4.39 4.39 28.19-28.19a10.15 10.15 0 0 1 17.32 7.18 10 10 0 0 1-3 7.18L55.45 67.39l4.4 4.39 24.32-24.32a16.38 16.38 0 0 0 0-23.14z"></path>
-								    <path d="M70.47 33.63L42.28 61.81a10.17 10.17 0 0 1-14.36 0l-2.19-2.2L21.34 64l2.19 2.2a16.39 16.39 0 0 0 23.14 0L74.86 38z"></path>
-								  </g>
-								</svg>
+								<img src="./img/skills/squarespace.svg" loading="lazy" alt="" class="w-6 mr-3">
 								<div class="text-gray-800 font-medium">Squarespace</div>
 							</div>
 						</li>
@@ -603,22 +668,98 @@
 
 						<li class="flex pl-0 mb-4">
 							<div class="skill flex items-center">
-								<img src="./img/skills/uiux.svg" loading="lazy" alt="" class="w-6 mr-3">
-								<div class="text-gray-800 font-medium">UI/UX</div>
+								<img src="./img/skills/shopify.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Shopify</div>
+							</div>
+						</li>
+					</ul>
+					<h3 class="text-2xl font-semibold text-gray-800">Technologies</h3>
+					<ul role="list" class="technologies">
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/html.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">HTML</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/css.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">CSS</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/tailwind.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Tailwind CSS</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/js.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Javascript</div>
+							</div>
+						</li>
+						<li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/nodejs2.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Node.js</div>
+							</div>
+						</li>
+						<li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/express.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Express.js</div>
+							</div>
+						</li>
+						<!-- <li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/ecommerce.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">E-commerce</div>
+							</div>
+						</li> -->
+						<!-- <li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/react.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">React.js</div>
+							</div>
+						</li> -->
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/php.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">PHP</div>
+							</div>
+						</li>
+
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/laravel.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Laravel</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/mysql.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">MySQL</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/mongodb.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">MongoDB</div>
 							</div>
 						</li>
 					</ul>
 					<!-- <h3 class="text-xl font-semibold text-gray-800">Development</h3>
 					<ul role="list" class="technologies">
-						<li class="technologies__item"><a href="/development-services/node-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191229a361b00293efc6b4_nodejs.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Node.js</div></a></li>
-						<li class="technologies__item"><a href="/services/web-development" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a98a151460f3d11d1_reactnative.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">React.js</div></a></li>
-						<li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912292e13f63d4a9c6b0e_cloud.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Cloud</div></a></li>
-						<li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a3ef695203eeb53a5_uiux.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">UI/UX</div></a></li><li class="technologies__item"><a href="/development-services/react-native-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a98a151460f3d11d1_reactnative.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">React Native</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122831a68457d4208b64_automation.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Automation</div></a></li><li class="technologies__item"><a href="/development-services/python-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191229a21726425c1d7058_python.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Python</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912299bb728d4243d5f2d_discovery.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Product Discovery</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912283d1cb105c576c023_monitoring.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Monitoring</div></a></li><li class="technologies__item"><a href="/development-services/express-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912294e95eb2bb4f58294_expressjs.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Express.js</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191228a361b039caefc6b3_design.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Product Design</div></a></li><li class="technologies__item"><a href="/development-services/meteor-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191228a278ddd872a8938c_meteorjs.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Meteor.js</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122956aaf46db857520d_prototyping.svg" loading="lazy" alt="" class="technologies__icon"><div class="technologies__name">Rapid Prototyping</div></a></li>
+						<li class="technologies__item"><a href="/development-services/node-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191229a361b00293efc6b4_nodejs.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Node.js</div></a></li>
+						<li class="technologies__item"><a href="/services/web-development" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a98a151460f3d11d1_reactnative.svg" loading="lazy" alt="" class="technologies__icon"><div class=">React.js</div></a></li>
+						<li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912292e13f63d4a9c6b0e_cloud.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Cloud</div></a></li>
+						<li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a3ef695203eeb53a5_uiux.svg" loading="lazy" alt="" class="technologies__icon"><div class=">UI/UX</div></a></li><li class="technologies__item"><a href="/development-services/react-native-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122a98a151460f3d11d1_reactnative.svg" loading="lazy" alt="" class="technologies__icon"><div class=">React Native</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122831a68457d4208b64_automation.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Automation</div></a></li><li class="technologies__item"><a href="/development-services/python-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191229a21726425c1d7058_python.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Python</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912299bb728d4243d5f2d_discovery.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Product Discovery</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912283d1cb105c576c023_monitoring.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Monitoring</div></a></li><li class="technologies__item"><a href="/development-services/express-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/601912294e95eb2bb4f58294_expressjs.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Express.js</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191228a361b039caefc6b3_design.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Product Design</div></a></li><li class="technologies__item"><a href="/development-services/meteor-js-development-services" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/60191228a278ddd872a8938c_meteorjs.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Meteor.js</div></a></li><li class="technologies__item"><a href="#" class="technologies__link w-inline-block"><img src="https://uploads-ssl.webflow.com/60100d2607bb730b274862d6/6019122956aaf46db857520d_prototyping.svg" loading="lazy" alt="" class="technologies__icon"><div class=">Rapid Prototyping</div></a></li>
 					</ul> -->
 				</div>
 			</div>
 
-			<div class="flex flex-col sm:flex-row items-center justify-between w-full py-36">
+			<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-36 pb-12" id="branding">
 				<div class="w-full sm:w-1/2">
 					<div class="relative">
 						<p style="z-index: -1; color: #f2f2f2; font-size: 180px; line-height: 1;" class="font-semibold absolute -top-14">03</p>
@@ -636,6 +777,63 @@
 					<img class="w-full sm:max-w-md pt-10 mx-auto sm:p-0 sm:pl-6 sm:float-right" src="./img/logo1.png">
 				</div>
 			</div>
+
+			<div>
+				<div class="container">
+					<h3 class="text-2xl font-semibold text-gray-800">Components</h3>
+					<ul role="list" class="technologies">
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/branding.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Brand</div>
+							</div>
+						</li>
+						<li class="flex mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/logo.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Logo</div>
+							</div>
+						</li>
+						<!-- <li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/uiux.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">UI/UX</div>
+							</div>
+						</li> -->
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/typography.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Typography</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/color.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Color Palette</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/cog.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Design System</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/print.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Print</div>
+							</div>
+						</li>
+						<li class="flex pl-0 mb-4">
+							<div class="skill flex items-center">
+								<img src="./img/skills/email.svg" loading="lazy" alt="" class="w-6 mr-3">
+								<div class="text-gray-800 font-medium">Email Design</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
 		</section>
 
 		<footer class="max-w-7xl mx-auto px-8">
