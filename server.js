@@ -33,6 +33,12 @@ app.get('/contact', (req, res) => {
 	res.render('contact');
 })
 
+app.get('/projects/:slug', (req, res, next)=>{
+	res.render('projects/old-man-and-the-sea')
+
+	// Handle page not found
+});
+
 app.post('/contact', (req, res) => {
 	console.log(req.body);
 
