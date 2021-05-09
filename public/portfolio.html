@@ -5,6 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<meta name="description" content="See my Design & Web Development Portfolio, where I showcase some of the featured web and design projects I have done in the past.">
+	<meta property="og:url" content="https://www.nunogaiopereira.com" />
+	<meta property="og:type" content= "website" />
+	<meta property="og:title" content="Nuno Gaio Pereira - Designer & Developer" />
+	<meta property="og:description" content="See my Design & Web Development Portfolio, where I showcase some of the featured web and design projects I have done in the past." />
+
 	<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
@@ -285,83 +291,96 @@
 				<h2 class="font-semibold text-4xl">Portfolio</h2>
 				<p class="mt-4">A selection of my recent works</p>
 				<div class="py-12">
-					<ul>
+					<ul class="portfolio-nav">
+						<li class="inline-block"><a href="#/" class="test active inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-900" onclick="filterSelection('all')">All</a></li>
+						<li class="inline-block"><a href="#/" class="test inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-900" onclick="filterSelection('design')">Design</a></li>
+						<li class="inline-block"><a href="#/" class="test inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-900" onclick="filterSelection('web')">Web</a></li>
+						<li class="inline-block"><a href="#/" class="test inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-900" onclick="filterSelection('branding')">Branding</a></li>
+					</ul>
+					<!-- <ul>
 						<li class="inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-900">All</li>
 						<li class="inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-400">Web</li>
 						<li class="inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-400">Graphic Design</li>
 						<li class="inline-block font-semibold mx-6 cursor-pointer hover:text-gray-800 text-gray-400">Branding</li>
-						<!-- <li class="inline-block font-semibold px-6 py-2 mx-3 border-2 border-gray-800 cursor-pointer hover:bg-gray-800 hover:text-white">All</li>
-						<li class="inline-block font-semibold px-6 py-2 mx-3 border-2 border-gray-800 cursor-pointer hover:bg-gray-800 hover:text-white">All</li>
-						<li class="inline-block font-semibold px-6 py-2 mx-3 border-2 border-gray-800 cursor-pointer hover:bg-gray-800 hover:text-white">All</li> -->
-					</ul>
+					</ul> -->
 					<div class="grid grid-cols-2 pt-8">
-					 	<div class="col-span-1 py-6">
-				       		<div class="relative group">
-					            <a href="">
-					                <img src="./img/zenstate1.png" alt="" class="w-full relative" style="z-index: 1">
-					                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-200 bg-opacity-60 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
-					                	<div>
-						                	<p style="text-shadow: 1px 1px #aaa;">Meditation Web App</p>
-						                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Design and Development</p>
-					                	</div>
+					 	<div class="work web design">
+						 	<div class="col-span-1 py-6">
+					       		<div class="relative group">
+						            <a href="">
+						                <img src="./img/zenstate1.png" alt="" class="w-full relative" style="z-index: 1">
+						                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-200 bg-opacity-60 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
+						                	<div>
+							                	<p style="text-shadow: 1px 1px #aaa;">Meditation Web App</p>
+							                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Design and Development</p>
+						                	</div>
+						                </div>
+						            </a>
+						        </div>
+						    </div>
+					    </div>
+					    <div class="work web design">
+						    <div class="col-span-1 py-6">
+					       		<div class="relative group">
+						            <a href="">
+						                <img src="./img/ligca1.png" alt="" class="w-full relative" style="z-index: 1">
+						                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-200 bg-opacity-60 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
+						                	<div>
+							                	<p style="text-shadow: 1px 1px #aaa;">Children's Art Education Charity</p>
+							                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Wordpress Development and Design</p>
+						                	</div>
+						                </div>
+						                <!-- <div class="absolute bottom-0 left-0 text-xl px-4 py-2 bg-gradient-to-t to-transparent from-gray-300 opacity-0 group-hover:opacity-100 transition w-full text-white font-semibold" style="z-index: 1">
+						                	<p style="text-shadow: 1px 1px #999;">Meditation App</p>
+					                	</div> -->
 					                </div>
 					            </a>
 					        </div>
 					    </div>
-					    <div class="col-span-1 py-6">
-				       		<div class="relative group">
-					            <a href="">
-					                <img src="./img/ligca1.png" alt="" class="w-full relative" style="z-index: 1">
-					                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-200 bg-opacity-60 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
-					                	<div>
-						                	<p style="text-shadow: 1px 1px #aaa;">Children's Art Education Charity</p>
-						                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Wordpress Development and Design</p>
-					                	</div>
-					                </div>
-					                <!-- <div class="absolute bottom-0 left-0 text-xl px-4 py-2 bg-gradient-to-t to-transparent from-gray-300 opacity-0 group-hover:opacity-100 transition w-full text-white font-semibold" style="z-index: 1">
-					                	<p style="text-shadow: 1px 1px #999;">Meditation App</p>
-					                </div> -->
-					            </a>
-					        </div>
+					    <div class="work web design branding">
+						    <div class="col-span-1 py-6">
+					       		<div class="relative group">
+						            <a href="">
+						                <img src="./img/agp1.png" alt="" class="w-full relative" style="z-index: 1">
+						                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-400 bg-opacity-70 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
+						                	<div>
+							                	<p style="text-shadow: 1px 1px #aaa;">Musician Portfolio</p>
+							                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Branding and Web Development</p>
+						                	</div>
+						                </div>
+						            </a>
+						        </div>
+						    </div>
 					    </div>
-					    <div class="col-span-1 py-6">
-				       		<div class="relative group">
-					            <a href="">
-					                <img src="./img/agp1.png" alt="" class="w-full relative" style="z-index: 1">
-					                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-400 bg-opacity-70 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
-					                	<div>
-						                	<p style="text-shadow: 1px 1px #aaa;">Musician Portfolio</p>
-						                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Branding and Web Development</p>
-					                	</div>
-					                </div>
-					            </a>
-					        </div>
+					    <div class="work web design">
+						    <div class="col-span-1 py-6">
+					       		<div class="relative group">
+						            <a href="">
+						                <img src="./img/breathe1.png" alt="" class="w-full relative" style="z-index: 1">
+						                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-400 bg-opacity-70 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
+						                	<div>
+							                	<p style="text-shadow: 1px 1px #aaa;">Relaxation Breathing Web App</p>
+							                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Design and Web Development</p>
+						                	</div>
+						                </div>
+						            </a>
+						        </div>
+						    </div>
 					    </div>
-					    <div class="col-span-1 py-6">
-				       		<div class="relative group">
-					            <a href="">
-					                <img src="./img/breathe1.png" alt="" class="w-full relative" style="z-index: 1">
-					                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-400 bg-opacity-70 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
-					                	<div>
-						                	<p style="text-shadow: 1px 1px #aaa;">Relaxation Breathing Web App</p>
-						                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Design and Web Development</p>
-					                	</div>
-					                </div>
-					            </a>
-					        </div>
-					    </div>
-					    <div class="col-span-1 py-6">
-				       		<div class="relative group">
-					            <a href="">
-					                <img src="./img/ukmfgreview1.png" alt="" class="w-full relative" style="z-index: 1">
-					                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-400 bg-opacity-70 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
-					                	<div>
-						                	<p style="text-shadow: 1px 1px #aaa;">UK Manufacturing Review Website</p>
-						                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Wordpress Development and Content Creation</p>
-					                	</div>
-					                </div>
-					            </a>
-					        </div>
+					    <div class="work web">
+						    <div class="col-span-1 py-6">
+					       		<div class="relative group">
+						            <a href="">
+						                <img src="./img/ukmfgreview1.png" alt="" class="w-full relative" style="z-index: 1">
+						                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-400 bg-opacity-70 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
+						                	<div>
+							                	<p style="text-shadow: 1px 1px #aaa;">UK Manufacturing Review Website</p>
+							                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Wordpress Development and Content Creation</p>
+						                	</div>
+						                </div>
+						            </a>
+						        </div>
+						    </div>
 					    </div>
 					    <!-- <div class="col-span-1 py-6">
 				       		<div class="relative group">
@@ -376,18 +395,20 @@
 					            </a>
 					        </div>
 					    </div> -->
-					    <div class="col-span-1 py-6">
-				       		<div class="relative group">
-					            <a href="/projects/old-man-and-the-sea">
-					                <img src="./img/hemingway.png" alt="" class="w-full relative" style="z-index: 1">
-					                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-100 bg-opacity-10 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
-					                	<div>
-						                	<p style="text-shadow: 1px 1px #aaa;">The Old Man and the Sea</p>
-						                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Book Cover Design</p>
-					                	</div>
-					                </div>
-					            </a>
-					        </div>
+					    <div class="work design">
+						    <div class="col-span-1 py-6">
+					       		<div class="relative group">
+						            <a href="/projects/old-man-and-the-sea">
+						                <img src="./img/hemingway.png" alt="" class="w-full relative" style="z-index: 1">
+						                <div class="absolute w-full h-full justify-center text-center flex items-center bottom-0 left-0 text-xl px-4 py-2 bg-gray-100 bg-opacity-10 from-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 w-full text-white font-semibold" style="z-index: 1">
+						                	<div>
+							                	<p style="text-shadow: 1px 1px #aaa;">The Old Man and the Sea</p>
+							                	<p style="text-shadow: 1px 1px #aaa;" class="text-sm">Book Cover Design</p>
+						                	</div>
+						                </div>
+						            </a>
+						        </div>
+						    </div>
 					    </div>
 				    </div>
 				</div>
@@ -494,6 +515,61 @@
 	<!-- <script src="./main.js"></script> -->
 
 	<script> </script>
+
+	<script> 
+
+		filterSelection("all");
+		function filterSelection(c) {
+		  var x, i;
+		  x = document.getElementsByClassName("work");
+
+		  if (c == "all") {
+		  	c = "";
+		  }
+
+		  for (i = 0; i < x.length; i++) {
+			removeClass(x[i], "hidden");
+			if (x[i].className.indexOf(c) == -1) {
+				addClass(x[i], "hidden");
+			}
+		  }
+		}
+
+		function addClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+		    if (arr1.indexOf(arr2[i]) == -1) {
+		    	element.className += " " + arr2[i];
+		    }
+		  }
+		}
+
+		function removeClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+		    while (arr1.indexOf(arr2[i]) > -1) {
+		      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+		    }
+		  }
+		  element.className = arr1.join(" ");
+		}
+
+		// // Add active class to the current button (highlight it)
+		// var btnContainer = document.querySelector(".portfolio-nav");
+		// var btns = document.getElementsByClassName("test");
+		// console.log(btns);
+		// for (var i = 0; i < btns.length; i++) {
+		//   btns[i].addEventListener("click", function(){
+		//     var current = document.getElementsByClassName("active");
+		//     current[0].className = current[0].className.replace(" active", "");
+		//     this.className += " active";
+		//   });
+		// }
+	</script>
 
 </body>
 </html>
