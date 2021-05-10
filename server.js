@@ -34,7 +34,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/projects/:slug', (req, res, next)=>{
-	res.render('projects/old-man-and-the-sea')
+	res.render('projects/' + req.params.slug)
 
 	// Handle page not found
 });
