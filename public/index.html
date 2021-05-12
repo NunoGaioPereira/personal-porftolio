@@ -59,6 +59,10 @@
 		    grid-gap: 1.5rem;
 		}
 
+		.service-box:hover .service-link img {
+			transform: translateX(10px);
+		}
+
 		/*.grid a img {
 		    transition: all .2s ease-in;
 		    filter: grayscale(0);
@@ -368,7 +372,8 @@
 				<div class="w-full sm:w-1/2">
 					<p class="font-semibold text-xl">who am I <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p>
 					<h2 class="font-semibold text-4xl">Nuno Gaio Pereira<span class="bg-blue-400 w-2 h-2 inline-block ml-1"></span></h2>
-					<p class="">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat liqua. I am a Designer and Full-Stack Web Developer.</p>
+					<p class="">I'm Nuno, and independent Designer and Full-Stack Web Developer based in Lisbon.
+					I help you and your business create an online impact through crafting a web solution that fits your vision. I focus on building bespoke websites and applications built with expertise and passion.</p>
 					<div class="mt-8">
 						<a href="#services" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-8 py-3 text-sm text-white">what I offer</a>
 					</div>
@@ -384,28 +389,46 @@
 			<h2 class="font-semibold text-4xl">Services</h2>
 
 			<div class="grid grid-cols-3 gap-4 py-10">
-				<a href="/services#design">
+				<a href="/services#design" class="service-box">
 					<div class="bg-gray-10 px-10 py-20 shadow-lg hover:shadow-2xl transition duration-300">
 						<p class="text-xl font-semibold">01</p>
 						<h3 class="text-3xl font-semibold mt-8">Design</h3>
-						<p class="pt-4">All projects start with an idea. Through design, we bring your ideas to a tangible beautiful design.</p>
+						<p class="pt-4">All projects start with an idea. Through design, we create the possibility of bringining your ideas to a tangible beautiful design.</p>
 						<img class="pt-12 w-20" src="./img/design.png">
+						<div class="mt-8">
+							<div class="inline-block transition duration-300 font-semibold service-link">
+								<span>read more</span>
+								<img class="transition ml-2 inline-block w-4" src="./img/arrow_right.png">
+							</div>
+						</div>
 					</div>
 				</a>
-				<a href="/services#development">
+				<a href="/services#development" class="service-box">
 					<div class="bg-gray-10 px-10 py-20 shadow-lg hover:shadow-2xl transition duration-300">
 						<p class="text-xl font-semibold">02</p>
 						<h3 class="text-3xl font-semibold mt-8">Development</h3>
-						<p class="pt-4">It's time to bring your idea to life. As en experience developer, I work with CMS such as Wordpress and Squarespace, to Laravel and MERN stack.</p>
+						<p class="pt-4">I design and build bespoke websites. As an experienced developer, from pure website design, to custom code development, to CMS solutions, my passion and purpose is to bring your web project idea to life.</p>
 						<img class="pt-12 w-20" src="./img/develop.png">
+						<div class="mt-8">
+							<div class="inline-block transition duration-300 font-semibold service-link">
+								<span>read more</span>
+								<img class="transition ml-2 inline-block w-4" src="./img/arrow_right.png">
+							</div>
+						</div>
 					</div>
 				</a>
-				<a href="/services#branding">
+				<a href="/services#branding" class="service-box">
 					<div class="bg-gray-10 px-10 py-20 shadow-lg hover:shadow-2xl transition duration-300">
 						<p class="text-xl font-semibold">03</p>
 						<h3 class="text-3xl font-semibold mt-8">Branding & Identity</h3>
 						<p class="pt-4">When building your identity every detail matters. I will help you create the brand experience that you deserve and represent who you are.</p>
 						<img class="pt-12 w-20" src="./img/branding.png">
+						<div class="mt-8">
+							<div class="inline-block transition duration-300 font-semibold service-link">
+								<span>read more</span>
+								<img class="transition ml-2 inline-block w-4" src="./img/arrow_right.png">
+							</div>
+						</div>
 					</div>
 				</a>
 			</div>
