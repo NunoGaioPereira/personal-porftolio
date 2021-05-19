@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" href="./style.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<title>Nuno Gaio Pereira - Project</title>
+
+	<style type="text/css">
+		@import url('../fonts/fonts.css');
+
+		* {
+			font-family: 'Poppins', 'Zona Pro', 'Muli', sans-serif;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.grid {
+		    display: grid;
+		    grid-template-columns: 1fr;
+		    grid-gap: 1.5rem;
+		}
+
+		/*.grid a img {
+		    transition: all .2s ease-in;
+		    filter: grayscale(0);
+		}
+
+		.grid a:hover img {
+		    filter: grayscale(100%);
+		}*/
+
+		/*@media screen and (min-width: 768px) {*/
+		@media screen and (min-width: 600px) {
+		    .grid {
+		        grid-template-columns: repeat(2, 1fr);
+		    }
+		}
+
+		@media screen and (min-width: 992px) {
+		    .grid {
+		        grid-template-columns: repeat(3, 1fr);
+		    }
+		}
+	</style>
+</head>
+<body>
+	<div class="app" x-data="{ navScrolled: false, mobileMenu: false }">
+
+		<%- include('../partials/nav') %>
+		<%- include('../partials/mobile_nav') %>
+
+		<section class="" id="about">
+			<div class="min-h-screen w-full flex items-center justify-center" style="background: url('../img/hemingway2.png') no-repeat; background-size: cover; background-position: center">
+				<div class="bg-white sm:max-w-3xl w-xl px-8 sm:px-16 py-12 sm:py-16 mt-36 bg-opacity-90 mx-auto text-center z-10">
+					<div>
+						<p class="uppercase font-semibold text-sm mb-2">book cover design</p>
+						<h2 class="font-bold text-xl sm:text-4xl pb-4">The Old Man and the Sea</h2>
+						<span class="bg-gray-300 h-8 sm:h-14 py-4 block mx-auto" style="width: 2px;"></span>
+						<p class="text-sm text-gray-700 font-semibold pt-4">October 2018</p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="flex justify-center">
+				<div class="bg-white sm:max-w-3xl w-xl px-8 sm:px-28 py-16 sm:py-36 mx-auto text-center absolute -mt-24 sm:-mt-64 z-10">
+					<div>
+						<p class="uppercase font-semibold text-sm mb-2">book cover design</p>
+						<h2 class="font-bold text-xl sm:text-4xl pb-4">The Old Man and the Sea</h2>
+						<span class="bg-gray-300 h-8 sm:h-14 py-4 block mx-auto" style="width: 2px;"></span>
+						<p class="text-sm text-gray-700 font-semibold pt-4">Outubro 2018</p>
+					</div>
+				</div>
+			</div> -->
+		</section>
+
+		<section class="max-w-5xl mx-auto px-8 pb-36 pt-16" id="about">
+			<div>
+				<h2 class="font-semibold text-3xl">The Old Man and the Sea</h2>
+				<p class="text-gray-400 font-medium text-xl">Book Cover Design Concept</p>
+				<p class="mt-4">The Old Man and the Sea is just one of those classics that has to be read. I instantly fell in love with the story the first time I picked up this book.</p>
+				<p class="mt-4">As an attempt of capturing what this book portrays, I created a cover design inspired in the colours of the sea and the mythical fish that represents strength, character and determination.</p>
+
+				<img src="../img/hemingway.png" class="w-full sm:w-3/4 mt-8 mx-auto">
+
+				<!-- <hr class="mt-12"> -->
+				<span class="bg-gray-300 mt-12 h-8 sm:h-14 py-4 block mx-auto" style="width: 2px;"></span>
+				<p class="mt-12">Your next project could be on this page! Click below to get in touch and we will bring your idea to life.</p>
+				<div class="mt-8">
+					<a href="/contact" class="inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-10 py-3 text-white">Let's talk!</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<%- include('../partials/footer') %>
+
+	<script> </script>
+
+</body>
+</html>
