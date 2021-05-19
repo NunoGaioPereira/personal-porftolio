@@ -69,6 +69,23 @@
 		        grid-template-columns: repeat(3, 1fr);
 		    }
 		}
+
+		.no-show {
+			visibility: hidden;
+		    opacity: 0;
+			transition: visibility 0.2s, opacity 0.5s linear;
+		}
+
+		.no-show .fixed {
+			/*webkit-box-shadow: 0px 5px 18px 0px rgba(50, 50, 50, 0.44);
+			-moz-box-shadow:    0px 5px 18px 0px rgba(50, 50, 50, 0.44);*/
+			box-shadow: 0px 5px 18px 0px rgba(50, 50, 50, 0.4);	
+		}
+
+		.show {
+			visibility: visible;
+  			opacity: 1;
+		}
 	</style>
 </head>
 <body>
@@ -431,6 +448,9 @@
 			</div>
 		</section>
 
+		<div id="success" class="no-show shadow-4xl"></div>
+
+
 		<footer class="max-w-7xl mx-auto px-8">
 			<div class="py-6 pb-12 flex flex-col sm:flex-row justify-between">
 				<div class="text-center pb-5 sm:pb-0 sm:text-left">
@@ -522,9 +542,37 @@
 		let name = document.getElementById('name');
 		let email = document.getElementById('email');
 		let message = document.getElementById('message');
+		let success_banner = document.getElementById('success');
+
+		// const sent_banner = `<div class="hidden fixed bottom-8 left-8 bg-blue-400 py-4 px-10 rounded text-sm text-white cursor-pointer">
+		// 	<div class="">
+		// 		<span>Message sent</span>
+		// 	</div>
+		// </div>`;
+
+		success_banner.innerHTML = `<div class="fixed bottom-8 left-8 bg-blue-400 py-4 px-10 text-sm text-white cursor-pointer">
+			<div class="">
+				<span>Message sent</span>
+			</div>
+		</div>`;
+
+		success_banner.addEventListener('click', (e) => {
+			console.log(success_banner.classList);
+			success_banner.classList.remove("show");
+			//this.classList.add("no-show");
+		});
+
+		function hide_banner(){
+		  success_banner.classList.remove("show");
+		}
 
 		contactForm.addEventListener('submit', (e) => {
 			e.preventDefault();
+
+			if (name.value == "" || email.value == "" || message.value == "") {
+				alert('Please fill in all fields');
+				return;
+			}
 
 			let formData = {
 				name: name.value,
@@ -538,10 +586,12 @@
 			xhr.onload = function() {
 				console.log(xhr.responseText);
 				if(xhr.responseText == 'success') {
-					alert('Email sent');
+					//alert('Email sent');
 					name.value = '';
 					email.value = '';
 					message.value = '';
+					success_banner.classList.add("show");
+					setTimeout(hide_banner, 3500);
 				}
 				else {
 					alert('Something went wrong');
