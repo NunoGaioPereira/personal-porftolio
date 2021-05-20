@@ -2,12 +2,18 @@ const path = require('path');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
+// const expressValidator = require('express-validator');
+const { body, validationResult } = require('express-validator');
+
 
 dotenv.config({ path:'./config/config.env' });
+
+// app.use(expressValidator()); 
 
 const app = express();
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/public'));
@@ -39,7 +45,24 @@ app.get('/projects/:slug', (req, res, next)=>{
 	// Handle page not found
 });
 
-app.post('/contact', (req, res) => {
+app.post(
+	'/contact',  
+	body('email')
+		.isEmail()
+		.withMessage('Invalid email'),
+	body('name')
+		.isLength({
+			min: 2,
+			max: 30
+		})
+		.withMessage('Name must be between 2-30 characters'),
+	body('message')
+		.isLength({
+			min: 5,
+			max: 500
+		})
+		.withMessage('Message must be between 5-500 characters'),
+	(req, res) => {
 	console.log(req.body);
 
 	response = {
@@ -47,17 +70,25 @@ app.post('/contact', (req, res) => {
 		success: false,
 	};
 
-	if (req.body.name != 'n') {
-		response.errors.push('Invalid name');
-	}
+	// if (req.body.name != 'n') {
+	// 	response.errors.push('Invalid name');
+	// }
 
-	if (req.body.email != 'n') {
-		response.errors.push('Invalid email');
-	}
+	// if (req.body.email != 'n') {
+	// 	response.errors.push('Invalid email');
+	// }
+	// req.checkBody('email', 'Invalid Email').isEmail();
+	// body('email').isEmail();
+	var ers = validationResult(req);
+	// var ers = req.validationErrors(true);
+	ers.array().forEach((er) => {
+		console.log(er.msg);
+		response.errors.push(er.msg);
+	})
 
-	if (req.body.message != 'n') {
-		response.errors.push('Invalid message');
-	}
+	// if (req.body.message != 'n') {
+	// 	response.errors.push('Invalid message');
+	// }
 
 	if (response.errors.length > 0) {
 		res.send(response);
@@ -89,7 +120,7 @@ Message: ${req.body.message}`
 			// res.send('Could not send email. Please try again');
 		}
 		else {
-			response.success = false;
+			response.success = true;
 			console.log('Email sent: ' + info.response);
 			res.send(response);
 		}

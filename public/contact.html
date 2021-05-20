@@ -593,21 +593,33 @@
 			}
 
 			let xhr = new XMLHttpRequest();
+			xhr.responseType = 'json';
 			xhr.open('POST', '/contact');
 			xhr.setRequestHeader('content-type', 'application/json');
 			xhr.onload = function() {
-				console.log(xhr.responseText);
-				if(xhr.responseText == 'success') {
-					//alert('Email sent');
+				console.log(xhr.response.errors);
+				// if(xhr.responseText == 'success') {
+				if(xhr.response.success === true) {
+					
 					name.value = '';
 					email.value = '';
 					message.value = '';
 					show_and_hide_banner(success_banner);
 				}
 				else {
-					document.getElementById('error_msg').innerHTML = 'Please fill in all fields';
+					// console.log(xhr.response);
+					document.getElementById('error_msg').innerHTML = 'Please fix the following error';
+					if (xhr.response.errors.length > 1) {
+						document.getElementById('error_msg').innerHTML += 's';
+					}
+
+					xhr.response.errors.forEach( (err) =>  {
+						document.getElementById('error_msg').innerHTML += '<li>' + err + '</li>';
+					})
+					// document.getElementById('error_msg').innerHTML = xhr.response.errors;
+					// document.getElementById('error_msg').innerHTML = xhr.responseText;
 					show_and_hide_banner(error_banner);
-					alert('Something went wrong');
+					//alert('Something went wrong');
 				}
 			}
 
