@@ -41,8 +41,26 @@ app.get('/projects/:slug', (req, res, next)=>{
 
 app.post('/contact', (req, res) => {
 	console.log(req.body);
+
+	response = {
+		errors: [],
+		success: false,
+	};
+
 	if (req.body.name != 'n') {
-		res.send('Invalid email');
+		response.errors.push('Invalid name');
+	}
+
+	if (req.body.email != 'n') {
+		response.errors.push('Invalid email');
+	}
+
+	if (req.body.message != 'n') {
+		response.errors.push('Invalid message');
+	}
+
+	if (response.errors.length > 0) {
+		res.send(response);
 	}
 
 	const transporter = nodemailer.createTransport({
@@ -64,12 +82,16 @@ Message: ${req.body.message}`
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if(error) {
-			console.log(error);
-			res.send('Could not send email. Please try again');
+			// console.log(error);
+			response.success = true;
+			response.errors.push('Could not send email. Please try again');
+			res.send(response);
+			// res.send('Could not send email. Please try again');
 		}
 		else {
+			response.success = false;
 			console.log('Email sent: ' + info.response);
-			res.send('success');
+			res.send(response);
 		}
 	})
 })
