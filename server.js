@@ -60,7 +60,6 @@ app.post(
 		})
 		.withMessage('Message must be between 5-500 characters'),
 	(req, res) => {
-	console.log(req.body);
 
 	response = {
 		errors: [],
@@ -70,12 +69,12 @@ app.post(
 	var ers = validationResult(req);
 	
 	ers.array().forEach((er) => {
-		console.log(er.msg);
 		response.errors.push(er.msg);
 	})
 
 	if (response.errors.length > 0) {
 		res.send(response);
+		return;
 	}
 
 	const transporter = nodemailer.createTransport({
