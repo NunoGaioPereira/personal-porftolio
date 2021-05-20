@@ -73,10 +73,10 @@
 		.no-show {
 			visibility: hidden;
 		    opacity: 0;
-			transition: visibility 0.2s, opacity 0.5s linear;
+			transition: visibility 0.2s, opacity 0.4s ease-in-out, margin-left 0.4s ease-in-out;
 		}
 
-		.no-show .fixed {
+		.no-show .banner-container {
 			/*webkit-box-shadow: 0px 5px 18px 0px rgba(50, 50, 50, 0.44);
 			-moz-box-shadow:    0px 5px 18px 0px rgba(50, 50, 50, 0.44);*/
 			box-shadow: 0px 5px 18px 0px rgba(50, 50, 50, 0.4);	
@@ -85,6 +85,7 @@
 		.show {
 			visibility: visible;
   			opacity: 1;
+  			margin-left: 180px !important;
 		}
 	</style>
 </head>
@@ -448,7 +449,8 @@
 			</div>
 		</section>
 
-		<div id="success" class="no-show shadow-4xl"></div>
+		<div id="success" class="no-show shadow-4xl fixed bottom-8 -left-36"></div>
+		<div id="failure" class="no-show shadow-4xl fixed bottom-8 -left-36"></div>
 
 
 		<footer class="max-w-7xl mx-auto px-8">
@@ -543,6 +545,7 @@
 		let email = document.getElementById('email');
 		let message = document.getElementById('message');
 		let success_banner = document.getElementById('success');
+		let error_banner = document.getElementById('failure');
 
 		// const sent_banner = `<div class="hidden fixed bottom-8 left-8 bg-blue-400 py-4 px-10 rounded text-sm text-white cursor-pointer">
 		// 	<div class="">
@@ -550,27 +553,36 @@
 		// 	</div>
 		// </div>`;
 
-		success_banner.innerHTML = `<div class="fixed bottom-8 left-8 bg-blue-400 py-4 px-10 text-sm text-white cursor-pointer">
+		success_banner.innerHTML = `<div class="banner-container bg-blue-400 py-4 px-10 text-sm text-white cursor-pointer">
 			<div class="">
 				<span>Message sent</span>
 			</div>
 		</div>`;
 
-		success_banner.addEventListener('click', (e) => {
-			console.log(success_banner.classList);
-			success_banner.classList.remove("show");
-			//this.classList.add("no-show");
-		});
+		error_banner.innerHTML = `<div class="banner-container bg-red-500 py-4 px-10 text-sm text-white cursor-pointer">
+			<div class="flex justify-between items-center">
+				<span id="error_msg">Please fill in all fields</span>
+				<!--<span class="ml-8">&#10006;</span>-->
+			</div>
+		</div>`;
 
-		function hide_banner(){
-		  success_banner.classList.remove("show");
+		success_banner.addEventListener('click', (e) => { success_banner.classList.remove("show"); });
+		error_banner.addEventListener('click', (e) => { error_banner.classList.remove("show"); });
+
+		function show_and_hide_banner(banner,){
+			banner.classList.add("show");
+			setTimeout(function() {
+				banner.classList.remove("show");
+			}, 3500);
 		}
 
 		contactForm.addEventListener('submit', (e) => {
 			e.preventDefault();
 
 			if (name.value == "" || email.value == "" || message.value == "") {
-				alert('Please fill in all fields');
+				//alert('Please fill in all fields');
+				document.getElementById('error_msg').innerHTML = 'Please fill in all fields';
+				show_and_hide_banner(error_banner);
 				return;
 			}
 
@@ -586,14 +598,15 @@
 			xhr.onload = function() {
 				console.log(xhr.responseText);
 				if(xhr.responseText == 'success') {
-					//alert('Email sent');
+					
 					name.value = '';
 					email.value = '';
 					message.value = '';
-					success_banner.classList.add("show");
-					setTimeout(hide_banner, 3500);
+					show_and_hide_banner(success_banner);
 				}
 				else {
+					document.getElementById('error_msg').innerHTML = xhr.responseText;
+					show_and_hide_banner(error_banner);
 					alert('Something went wrong');
 				}
 			}

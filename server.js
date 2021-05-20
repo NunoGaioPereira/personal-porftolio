@@ -41,6 +41,9 @@ app.get('/projects/:slug', (req, res, next)=>{
 
 app.post('/contact', (req, res) => {
 	console.log(req.body);
+	if (req.body.name != 'n') {
+		res.send('Invalid email');
+	}
 
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
@@ -61,7 +64,8 @@ Message: ${req.body.message}`
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if(error) {
-			console.log(error);res.send('error');
+			console.log(error);
+			res.send('Could not send email. Please try again');
 		}
 		else {
 			console.log('Email sent: ' + info.response);
