@@ -2,13 +2,10 @@ const path = require('path');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
-// const expressValidator = require('express-validator');
 const { body, validationResult } = require('express-validator');
 
 
 dotenv.config({ path:'./config/config.env' });
-
-// app.use(expressValidator()); 
 
 const app = express();
 app.use(express.json());
@@ -70,25 +67,12 @@ app.post(
 		success: false,
 	};
 
-	// if (req.body.name != 'n') {
-	// 	response.errors.push('Invalid name');
-	// }
-
-	// if (req.body.email != 'n') {
-	// 	response.errors.push('Invalid email');
-	// }
-	// req.checkBody('email', 'Invalid Email').isEmail();
-	// body('email').isEmail();
 	var ers = validationResult(req);
-	// var ers = req.validationErrors(true);
+	
 	ers.array().forEach((er) => {
 		console.log(er.msg);
 		response.errors.push(er.msg);
 	})
-
-	// if (req.body.message != 'n') {
-	// 	response.errors.push('Invalid message');
-	// }
 
 	if (response.errors.length > 0) {
 		res.send(response);
@@ -115,7 +99,7 @@ Message: ${req.body.message}`
 		if(error) {
 			// console.log(error);
 			response.success = true;
-			response.errors.push('Could not send email. Please try again');
+			response.errors.push('Could not send message. Please try again.');
 			res.send(response);
 			// res.send('Could not send email. Please try again');
 		}
