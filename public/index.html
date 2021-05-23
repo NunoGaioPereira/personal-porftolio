@@ -357,11 +357,29 @@
 		</section> -->
 
 		<section class="max-w-7xl mx-auto pxtt-4 sm:pxtt-6 px-8 min-h-screen flex items-center">
-			<div class="">
+			<div class="text-center mx-auto">
 				<!-- <p class="font-semibold text-xl mb-2">nuno gaio pereira <span style="height: 3px;" class="inline-block mb-1 ml-2 w-7 bg-black"></span></p> -->
-				<h1 class="text-4xl font-semibold">Design. Develop. Innovate.</h1>
-				<h2 class="mt-4 text-gray-500 max-w-lg">I am Nuno, a web designer and developer based in Portugal. My passion is to create fully fledged websites and web apps :)</h2>
-				<div class="mt-10">
+				<style>
+					.hero-title:before {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 3px;
+						//right: 30px;
+						right: 15px;
+						width: 175px;
+						height: 10px;
+						background-color: #54b4f8;
+						z-index: -1;
+					}
+				</style>
+				<div class="relative">
+					<img src="./img/dots.png" class="w-20 absolute" style="margin-left: -30px; margin-top: 40px;">
+					
+				</div>
+				<h1 class="hero-title relative text-4xl pt-20 text-gray-800 font-semibold">Design. Develop. Innovate.</h1>
+				<h2 class="mt-6 text-gray-500 text-lg max-w-lg">I am Nuno, a web designer and developer based in Portugal. My passion is to create fully fledged websites and web apps :)</h2>
+				<div class="mt-12">
 					<a href="#about" class="inline-block bg-gray-900 hover:bg-gray-800 transition duration-300 px-8 py-3 text-white text-sm">read more</a>
 				</div>
 			</div>
