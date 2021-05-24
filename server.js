@@ -17,23 +17,23 @@ app.set('views', path.join(__dirname, '/public'));
 
 
 app.get('/', (req, res) => {
-	res.render('index');
+	res.render('index', { pageTitle: 'Home' });
 })
 
 app.get('/services', (req, res) => {
-	res.render('services');
+	res.render('services', { pageTitle: 'Services' });
 })
 
 app.get('/portfolio', (req, res) => {
-	res.render('portfolio');
+	res.render('portfolio', { pageTitle: 'Portfolio' });
 })
 
 app.get('/about', (req, res) => {
-	res.render('about');
+	res.render('about', { pageTitle: 'About' });
 })
 
 app.get('/contact', (req, res) => {
-	res.render('contact');
+	res.render('contact', { pageTitle: 'Contact' });
 })
 
 app.get('/projects/:slug', (req, res, next)=>{

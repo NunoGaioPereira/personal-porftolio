@@ -10,11 +10,11 @@
 				</div>
 				<div class="ml-10 hidden sm:inline-block">
 					<ul class="space-x-8">
-						<li class="inline-block font-semibold text-gray-900 transition duration-300 "><a href="">Home</a></li>
-						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600"><a href="/services">Services</a></li>
-						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600"><a href="/about">About</a></li>
-						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600"><a href="/portfolio">Work</a></li>
-						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600"><a href="/contact">Contact</a></li>
+						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text.gray-600 <% if (pageTitle === 'Home') { %> text-gray-900 <% } %> "><a href="">Home</a></li>
+						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600 <% if (pageTitle === 'Services') { %> text-gray-900 <% } %> "><a href="/services">Services</a></li>
+						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600 <% if (pageTitle === 'About') { %> text-gray-900 <% } %> "><a href="/about">About</a></li>
+						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600 <% if (pageTitle === 'Portfolio') { %> text-gray-900 <% } %> "><a href="/portfolio">Work</a></li>
+						<li class="inline-block font-semibold text-gray-300 transition duration-300 hover:text-gray-600 <% if (pageTitle === 'Contact') { %> text-gray-900 <% } %> "><a href="/contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
