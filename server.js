@@ -37,7 +37,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/projects/:slug', (req, res, next)=>{
-	res.render('projects/' + req.params.slug)
+	res.render('projects/' + req.params.slug, { pageTitle: 'Project Page' })
 
 	// Handle page not found
 });
