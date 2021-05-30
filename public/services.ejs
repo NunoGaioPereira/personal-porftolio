@@ -73,58 +73,49 @@
 		  text-align: center;
 		}
 
-.cta {
-  width: 40px;
-  height: 40px;
-  //border-radius: 50px;
-  color: #fff;
-  transition: width 0.7s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-.cta:hover {
-  width: 180px;
-  transition: width 0.7s;
-}
-
-.cta .number, .cta .btn-arrow {
-  opacity: 1;
-  transition: opacity 0.5s
-}
-
-.cta:hover .number, .cta:hover .btn-arrow {
-  opacity: 0;
-  transition: opacity 0.5s
-}
-
-.cta .button-text {
-  opacity: 0;
-  transition: opacity .5s;
-  position: absolute;
-  width: 100%;
-  left: 0;
- }
-
-.cta:hover .button-text {
-  opacity: 1;
-  transition: opacity 0.5s
-}
-
-.number {
-  font-weight: 600;
-  font-size: 25px;
-}
-
-		/*.grid a img {
-		    transition: all .2s ease-in;
-		    filter: grayscale(0);
+		.cta {
+		  width: 40px;
+		  height: 40px;
+		  //border-radius: 50px;
+		  color: #fff;
+		  transition: width 0.7s;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  text-decoration: none;
+		}
+		.cta:hover {
+		  width: 180px;
+		  transition: width 0.7s;
 		}
 
-		.grid a:hover img {
-		    filter: grayscale(100%);
-		}*/
+		.cta .number, .cta .btn-arrow {
+		  opacity: 1;
+		  transition: opacity 0.5s
+		}
+
+		.cta:hover .number, .cta:hover .btn-arrow {
+		  opacity: 0;
+		  transition: opacity 0.5s
+		}
+
+		.cta .button-text {
+		  opacity: 0;
+		  transition: opacity .5s;
+		  position: absolute;
+		  width: 100%;
+		  left: 0;
+		 }
+
+		.cta:hover .button-text {
+		  opacity: 1;
+		  transition: opacity 0.5s
+		}
+
+		.number {
+		  font-weight: 600;
+		  font-size: 25px;
+		}
 
 		/*@media screen and (min-width: 768px) {*/
 		@media screen and (min-width: 600px) {
@@ -186,6 +177,17 @@
 		.technologies__icon {
 		    width: 24px;
 		    margin-right: 10px;
+		}
+
+		.faq-icon:after {
+			content: '+';
+			display: block;
+			font-style: semibold;
+			font-size: 26px;
+		}
+
+		.faq-icon.selected:after {
+			content: '-'
 		}
 	</style>
 </head>
@@ -762,7 +764,7 @@
 							</div>
 						</li>
 					</ul>
-					<!-- Other library and tools I have used include Apine.jS Howler.js, EJS, Bootstrap, Material UI. -->
+					<!-- <p class="text-gray-800">Other library and tools I have explored include jQuery, Apine.jS, Howler.js, Bootstrap, Material UI and Wix.</p> -->
 					
 					<!-- <h3 class="text-xl font-semibold text-gray-800">Development</h3>
 					<ul role="list" class="technologies">
@@ -849,7 +851,60 @@
 					</ul>
 				</div>
 			</div>
+		</section>
 
+		<section id="faq" class="max-w-7xl mx-auto px-8 pb-16">
+			<div>
+				<h3 class="text-2xl font-semibold text-gray-800">FAQ</h3>
+				<!-- <li class="relative list-none" x-data="{selected:null}">
+					<button type="button" class="w-full focus:outline-none" @click="selected !== 1 ? selected = 1 : selected = null">
+						<div class="task w-full flex py-4">
+							<label class="inline-flex items-center cursor-pointer">
+								<span data-status="open" x-bind:style="selected == 1 ? 'transform: rotate(90deg)' : ''">+</span>
+				                <img src="./img/arrow_right.png" class="arrow-right h-4" data-status="open" x-bind:style="selected == 1 ? 'transform: rotate(90deg)' : ''">
+				                <p class="ml-3 text-dark-gray font-semibold text-gray-800 cursor-pointer">I have a design but need a developer</p>
+				            </label>
+						</div>
+					</button>
+					<div class="border-b-2 ml-6 w-full border-line-gray"></div>
+
+					<div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+						<div class="w-full py-4 ml-6">
+			                <p class="ml-3 text-medium-gray text-gray-800 cursor-pointer">I provide full service from branding & identity, web design and web development.</p>
+						</div>
+					</div>
+				</li> -->
+				<ul class="list-none">
+					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
+						<button type="button" class="w-full px-4 py-4 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+							<div class="flex items-center justify-between">
+								<span class="font-semibold">I already have a website and only need updates, optimizations and/or maintenance.</span>
+								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
+							</div>
+						</button>
+
+						<div class="relative overflow-hidden transition-all max-h-0 duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+							<div class="p-4">
+								<p>I will work with you. I offer continuous maintenance and monitoring services for websites already built with different technologies, as well as any optimizations and/or updates.</p>
+							</div>
+						</div>
+					</li>
+					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
+						<button type="button" class="w-full px-4 py-4 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+							<div class="flex items-center justify-between">
+								<span class="font-semibold">I have a design but need a developer.</span>
+								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
+							</div>
+						</button>
+
+						<div class="relative overflow-hidden transition-all max-h-0 duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+							<div class="p-4">
+								<p>I can help you. Though I also offer design services, I also can develop a website from a given design.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<footer class="max-w-7xl mx-auto px-8">
