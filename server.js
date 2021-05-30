@@ -36,8 +36,18 @@ app.get('/contact', (req, res) => {
 	res.render('contact', { pageTitle: 'Contact' });
 })
 
+app.get('/policies', (req, res) => {
+	res.render('policies', { pageTitle: 'Policies' });
+})
+
 app.get('/projects/:slug', (req, res, next)=>{
 	res.render('projects/' + req.params.slug, { pageTitle: 'Project Page' })
+
+	// Handle page not found
+});
+
+app.get('pt/projetos/:slug', (req, res, next)=>{
+	res.render('pt/projetos/' + req.params.slug, { pageTitle: 'Project Page' })
 
 	// Handle page not found
 });
