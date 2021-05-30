@@ -110,6 +110,74 @@ Message: ${req.body.message}`
 	})
 })
 
+app.post(
+	'/pt/contact',  
+	body('email')
+		.isEmail()
+		.withMessage('Email inválido'),
+	body('name')
+		.isLength({
+			min: 2,
+			max: 30
+		})
+		.withMessage('O Nome dever ter entre 2-30 caracteres'),
+	body('message')
+		.isLength({
+			min: 5,
+			max: 500
+		})
+		.withMessage('A Mensagem dever ter entre 5-500 caracteres'),
+	(req, res) => {
+
+	response = {
+		errors: [],
+		success: false,
+	};
+
+	var ers = validationResult(req);
+	
+	ers.array().forEach((er) => {
+		response.errors.push(er.msg);
+	})
+
+	if (response.errors.length > 0) {
+		res.send(response);
+		return;
+	}
+
+	const transporter = nodemailer.createTransport({
+		service: 'gmail',
+		auth: {
+			user: 'nunogaiopereira@gmail.com',
+			pass: process.env.PASS
+		}
+	});
+
+	const mailOptions = {
+		from: req.body.email,
+		to: 'nunogaiopereira@gmail.com',
+		subject: `Message from ${req.body.name} - `,
+		text: `From: ${req.body.email}
+Name: ${req.body.name}
+Message: ${req.body.message}`
+	}
+
+	transporter.sendMail(mailOptions, (error, info) => {
+		if(error) {
+			// console.log(error);
+			response.success = true;
+			response.errors.push('Não foi possível enviar a mensagem. Por favor tente novamente.');
+			res.send(response);
+			// res.send('Could not send email. Please try again');
+		}
+		else {
+			response.success = true;
+			console.log('Email enviado: ' + info.response);
+			res.send(response);
+		}
+	})
+})
+
 // @TODO Optimise and config file
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
