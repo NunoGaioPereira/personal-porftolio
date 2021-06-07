@@ -1,12 +1,25 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    content: [
+      //'./public/**/*.html',
+      './public/*.html',
+    ]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        mainblue: '#54b4f8',
+      }
+    }
+    /*extend: {
     	transitionProperty: {
             'width': 'width'
         },
-    },
+    },*/
   },
   variants: {
     extend: {
