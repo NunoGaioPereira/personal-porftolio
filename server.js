@@ -132,7 +132,7 @@ Message: ${req.body.message}`
 	transporter.sendMail(mailOptions, (error, info) => {
 		if(error) {
 			// console.log(error);
-			response.success = true;
+			response.success = false;
 			response.errors.push('Could not send message. Please try again.');
 			res.send(response);
 			// res.send('Could not send email. Please try again');
@@ -146,7 +146,7 @@ Message: ${req.body.message}`
 })
 
 app.post(
-	'/pt/contact',  
+	'/pt/contato',  
 	body('email')
 		.isEmail()
 		.withMessage('Email inválido'),
@@ -199,8 +199,8 @@ Message: ${req.body.message}`
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if(error) {
-			// console.log(error);
-			response.success = true;
+			//console.log(error);
+			response.success = false;
 			response.errors.push('Não foi possível enviar a mensagem. Por favor tente novamente.');
 			res.send(response);
 			// res.send('Could not send email. Please try again');

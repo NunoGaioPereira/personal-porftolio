@@ -555,7 +555,7 @@
 
 		success_banner.innerHTML = `<div class="banner-container bg-mainblue py-4 px-10 text-sm text-white cursor-pointer">
 			<div class="">
-				<span>Message sent</span>
+				<span>Mensagem enviada, obrigado!</span>
 			</div>
 		</div>`;
 
@@ -594,7 +594,7 @@
 
 			let xhr = new XMLHttpRequest();
 			xhr.responseType = 'json';
-			xhr.open('POST', '/contact');
+			xhr.open('POST', '/pt/contato');
 			xhr.setRequestHeader('content-type', 'application/json');
 			xhr.onload = function() {
 				console.log(xhr.response.errors);
