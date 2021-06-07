@@ -6,6 +6,7 @@ module.exports = {
     content: [
       //'./public/**/*.html',
       './public/*.html',
+      './public/*.ejs',
     ]
   },
   darkMode: false, // or 'media' or 'class'

@@ -677,6 +677,11 @@ video {
   background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
 }
 
+.hover\:bg-mainblue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(84, 180, 248, var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -730,6 +735,11 @@ video {
 .border-blue-400 {
   --tw-border-opacity: 1;
   border-color: rgba(96, 165, 250, var(--tw-border-opacity));
+}
+
+.border-mainblue {
+  --tw-border-opacity: 1;
+  border-color: rgba(84, 180, 248, var(--tw-border-opacity));
 }
 
 .hover\:border-gray-800:hover {
@@ -1500,9 +1510,14 @@ video {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
-.text-blue-400 {
+.text-red-500 {
   --tw-text-opacity: 1;
-  color: rgba(96, 165, 250, var(--tw-text-opacity));
+  color: rgba(239, 68, 68, var(--tw-text-opacity));
+}
+
+.text-mainblue {
+  --tw-text-opacity: 1;
+  color: rgba(84, 180, 248, var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {
@@ -1543,6 +1558,11 @@ video {
 .hover\:text-blue-400:hover {
   --tw-text-opacity: 1;
   color: rgba(96, 165, 250, var(--tw-text-opacity));
+}
+
+.hover\:text-mainblue:hover {
+  --tw-text-opacity: 1;
+  color: rgba(84, 180, 248, var(--tw-text-opacity));
 }
 
 .uppercase {

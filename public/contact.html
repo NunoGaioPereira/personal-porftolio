@@ -32,8 +32,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
-	<!-- <link rel="stylesheet" href="./style.css"> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">-->
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 	<title>Nuno Gaio Pereira - Contact</title>
 
@@ -156,7 +156,7 @@
 							</div>
 							<div class="inline-block">
 								<a href="" class="inline-block">
-									<div class="h-10 w-10 bg-gray-900 hover:bg-blue-400 transition duration-300 text-white flex items-center justify-center">
+									<div class="h-10 w-10 bg-gray-900 hover:bg-mainblue transition duration-300 text-white flex items-center justify-center">
 										<svg class="h-5 w-5" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
 											<g>
 												<g>
@@ -333,7 +333,7 @@
 		
 			<div x-show="mobileMenu" @click.away="mobileMenu = false" class="sm:hidden" id="mobile-menu">
 				<div class="px-2 pt-2 pb-3 space-y-1">
-					<a href="#" class="bg-blue-400 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
+					<a href="#" class="bg-mainblue text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
 					<a href="#" class="text-gray-700 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Team</a>
 					<a href="#" class="text-gray-700 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
 					<a href="#" class="text-gray-700 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
@@ -442,7 +442,7 @@
 							<textarea id="message" name="message" class="w-full block bg-gray-100 border-b-2 border-gray-100 mt-2 py-3 px-3" rows="6" placeholder="Your Message"></textarea>
 						</div>
 						<div class="mt-8">
-							<button type="submit" class="cursor-pointer inline-block bg-blue-400 hover:bg-gray-800 transition duration-300 px-12 py-3 text-white" value="send">send</button>
+							<button type="submit" class="cursor-pointer inline-block bg-mainblue hover:bg-gray-800 transition duration-300 px-12 py-3 text-white" value="send">send</button>
 						</div>
 					</form>
 				</div>
@@ -459,7 +459,7 @@
 					<h3 class="text-gray-900 text-3xl">Have a project in mind?</h3>
 					<h4 class="mt-1 text-gray-300 text-3xl">Let's talk!</h4>
 					<div class="mt-10">
-						<a href="" class="inline-block text-sm bg-blue-400 border-2 border-blue-400 hover:bg-white hover:text-blue-400 transition duration-300 px-6 py-3 font-light text-white">Get in touch</a>
+						<a href="" class="inline-block text-sm bg-mainblue border-2 border-mainblue hover:bg-white hover:text-mainblue transition duration-300 px-6 py-3 font-light text-white">Get in touch</a>
 					</div>
 				</div>
 				<ul class="text-gray-700 list-none pt-4 sm:p-0 flex sm:flex-col text-left w-full justify-center sm:w-1/3">
@@ -547,13 +547,13 @@
 		let success_banner = document.getElementById('success');
 		let error_banner = document.getElementById('failure');
 
-		// const sent_banner = `<div class="hidden fixed bottom-8 left-8 bg-blue-400 py-4 px-10 rounded text-sm text-white cursor-pointer">
+		// const sent_banner = `<div class="hidden fixed bottom-8 left-8 bg-mainblue py-4 px-10 rounded text-sm text-white cursor-pointer">
 		// 	<div class="">
 		// 		<span>Message sent</span>
 		// 	</div>
 		// </div>`;
 
-		success_banner.innerHTML = `<div class="banner-container bg-blue-400 py-4 px-10 text-sm text-white cursor-pointer">
+		success_banner.innerHTML = `<div class="banner-container bg-mainblue py-4 px-10 text-sm text-white cursor-pointer">
 			<div class="">
 				<span>Message sent</span>
 			</div>
