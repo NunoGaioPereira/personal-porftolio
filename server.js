@@ -46,8 +46,33 @@ app.get('/projects/:slug', (req, res, next)=>{
 	// Handle page not found
 });
 
-app.get('pt/projetos/:slug', (req, res, next)=>{
-	res.render('pt/projetos/' + req.params.slug, { pageTitle: 'Project Page' })
+
+app.get('/pt', (req, res) => {
+	res.render('/pt/index', { pageTitle: 'Home' });
+})
+
+app.get('/pt/services', (req, res) => {
+	res.render('services', { pageTitle: 'Services' });
+})
+
+app.get('/pt/portfolio', (req, res) => {
+	res.render('portfolio', { pageTitle: 'Portfolio' });
+})
+
+app.get('//ptabout', (req, res) => {
+	res.render('about', { pageTitle: 'About' });
+})
+
+app.get('/pt/contato', (req, res) => {
+	res.render('pt/contato', { pageTitle: 'Contact' });
+})
+
+app.get('/pt/policies', (req, res) => {
+	res.render('policies', { pageTitle: 'Policies' });
+})
+
+app.get('/pt/projetos/:slug', (req, res, next)=>{
+	res.render('projetos/' + req.params.slug, { pageTitle: 'Project Page' })
 
 	// Handle page not found
 });
