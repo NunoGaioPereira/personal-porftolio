@@ -614,7 +614,49 @@
 				</li> -->
 				<ul class="list-none">
 					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
-						<button type="button" class="w-full px-4 py-4 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+						<button type="button" class="w-full px- py-4 text-left focus:outline-none" @click="selected !== 1 ? selected = 1 : selected = null">
+							<div class="flex items-center justify-between">
+								<span class="font-semibold">I need a custom software or web application.</span>
+								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
+							</div>
+						</button>
+
+						<div class="relative overflow-hidden transition-all max-h-0 duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+							<div class="p-4">
+								<p>Developing web applications is one of my main passions. With a software development background, I offer custom development with a variety of programming technologies.</p>
+							</div>
+						</div>
+					</li>
+					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
+						<button type="button" class="w-full px- py-4 text-left focus:outline-none" @click="selected !== 1 ? selected = 1 : selected = null">
+							<div class="flex items-center justify-between">
+								<span class="font-semibold">Do you offer CMS design and development?</span>
+								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
+							</div>
+						</button>
+
+						<div class="relative overflow-hidden transition-all max-h-0 duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+							<div class="p-4">
+								<p>Yes. I have experience with a variety of CMS's, including Wordpress, Webflow, Squarespace, Wix and Shopify.</p>
+							</div>
+						</div>
+					</li>
+					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
+						<button type="button" class="w-full px- py-4 text-left focus:outline-none" @click="selected !== 1 ? selected = 1 : selected = null">
+							<div class="flex items-center justify-between">
+								<span class="font-semibold">I need an online shop or e-commerce website.</span>
+								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
+							</div>
+						</button>
+
+						<div class="relative overflow-hidden transition-all max-h-0 duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+							<div class="p-4">
+								<p>Great! I can develop your e-commerce shop with Shopify, WooCommerce (Wordpress), Webflow, Shopify or Squarespace.</p>
+							</div>
+						</div>
+					</li>
+					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
+						<button type="button" class="w-full px- py-4 text-left focus:outline-none" @click="selected !== 1 ? selected = 1 : selected = null">
 							<div class="flex items-center justify-between">
 								<span class="font-semibold">I already have a website and only need updates, optimizations and/or maintenance.</span>
 								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
@@ -628,7 +670,7 @@
 						</div>
 					</li>
 					<li class="relative border-b-2 border-gray-200" x-data="{selected:null}">
-						<button type="button" class="w-full px-4 py-4 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+						<button type="button" class="w-full px- py-4 text-left focus:outline-none" @click="selected !== 1 ? selected = 1 : selected = null">
 							<div class="flex items-center justify-between">
 								<span class="font-semibold">I have a design but need a developer.</span>
 								<span class="faq-icon" x-bind:class="{'selected' : selected}"></span>
